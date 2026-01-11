@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Focus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-overlay"></div>
+
+<!-- FLOATING DECORATIONS -->
+<div class="float float-1">🌿</div>
+<div class="float float-2">⭐</div>
+<div class="float float-3">✨</div>
+
+<!-- 🌸 PETALS -->
+<div id="petals"></div>
+
+<div class="phone">
+  <div class="pages">
+
+    <!-- TODAY PAGE -->
+    <div class="page">
+      <img src="images/illustrator.jpg" class="hero-img">
+
+      <h1>Daily Focus</h1>
+      <p class="subtitle">Slow days still count 🌱</p>
+
+      <!-- 🔥 STREAK -->
+      <div class="streak">
+        🔥 <span id="streakCount">0</span> day streak
+      </div>
+
+      <div class="input-box">
+        <input id="taskInput" placeholder="Add a task…" />
+        <button onclick="addTask()">+</button>
+      </div>
+
+      <h3>Today</h3>
+      <ul id="taskList"></ul>
+
+      <!-- ✅ RESET BUTTON -->
+      <button class="reset-btn" onclick="resetTasks()">Reset Today</button>
+
+      <button class="slide-btn" onclick="openDonePage()">Completed →</button>
+
+      <div class="progress-wrap">
+        <div id="progressBar"></div>
+      </div>
+
+      <span id="progressText">0 / 0 done</span>
+    </div>
+
+    <!-- COMPLETED PAGE -->
+    <div class="page">
+      <div class="back-btn" onclick="closeDonePage()">← Back</div>
+
+      <img src="images/done.jpg" class="done-img">
+
+      <h2>Completed Tasks</h2>
+      <ul id="completedList"></ul>
+
+      <h3>Weekly History</h3>
+      <ul id="weeklyHistory"></ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🎉 CELEBRATION -->
+<div id="celebration" class="celebration hidden">
+  <div class="celebration-card">
+    🎉 All tasks completed! <br>
+    Great job today 💪
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
